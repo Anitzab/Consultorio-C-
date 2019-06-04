@@ -49,6 +49,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controlador\Controlador.cs" />
+    <Compile Include="Controlador\Validaciones.cs" />
     <Compile Include="formUsuarios.cs">
       <SubType>Form</SubType>
     </Compile>

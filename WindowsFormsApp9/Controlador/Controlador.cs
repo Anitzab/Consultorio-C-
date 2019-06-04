@@ -108,11 +108,11 @@ namespace WindowsFormsApp9.Controlador
             iSql = "SELECT  nombres, apellidos, cuenta FROM usuarios WHERE nombres LIKE ('" + _dato_a_buscar + "%') ORDER BY nombres ASC";
             return (bd.LeerRegistros(iSql));
         }
-        public bool agregarUsuarioCtl(object[] _datos)
+        public bool agregarUsuarioCtl(object[] _datos, ref string _error)
         {
             //mandar el nombre de la tabla y de los datos de la tabla al metodo al modelo
             _datos[3] = obtieneMD5(_datos[3].ToString());
-            return (bd.InsertarRegistro("usuarios", _datos));
+            return (bd.InsertarRegistro("usuarios", _datos, ref _error));
         }
     }
 }
